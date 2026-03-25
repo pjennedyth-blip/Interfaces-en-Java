@@ -5,17 +5,20 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         
-        ArrayList<EspacioCultural> lista = new ArrayList<>();
+        ArrayList<EspacioCultural> lugares = new ArrayList<>();
 
-        lista.add(new JardinBotanico());
-        lista.add(new MuseoDeAntioquia());
-        lista.add(new ParqueExplora());
+        lugares.add(new JardinBotanico());
+        lugares.add(new MuseoDeAntioquia());
+        lugares.add(new ParqueExplora());
 
-        for (EspacioCultural lugar : lista) {
-            System.out.println("Lugar: " + lugar.getNombre());
-            System.out.println("Horario: " + lugar.getHorario());
-            System.out.println("Requisito: " + lugar.getRequisito());
-            System.out.println("Actividad: " + lugar.getActividad());
+        for (EspacioCultural lugar : lugares) {
+
+            lugar.mostrarHorario();
+
+            System.out.println("Requisito: " + lugar.obtenerRequisitoEntrada());
+
+            lugar.realizarActividadPrincipal();
+
             System.out.println("----------------------------");
         }
 

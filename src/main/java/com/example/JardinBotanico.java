@@ -1,25 +1,32 @@
- package com.example;
+package com.example;
 
- 
- public class JardinBotanico implements EspacioCultural {
+public class JardinBotanico implements EspacioCultural {
 
-    @Override
-    public String getNombre() {
-        return "Jardín Botánico";
+    private String nombre;
+    private String horario;
+    private String requisito;
+    private String actividad;
+
+    public JardinBotanico() {
+        this.nombre = "Jardín Botánico";
+        this.horario = "9:00 AM - 4:30 PM";
+        this.requisito = "Entrada libre (algunos eventos requieren registro)";
+        this.actividad = "Caminando por el Bosque Tropical";
     }
 
     @Override
-    public String getHorario() {
-        return "9:00 AM - 4:30 PM";
+    public void mostrarHorario() {
+        System.out.println("Lugar: " + nombre);
+        System.out.println("Horario: " + horario);
     }
 
     @Override
-    public String getRequisito() {
-        return "Entrada libre (algunos eventos requieren registro)";
+    public String obtenerRequisitoEntrada() {
+        return requisito;
     }
 
     @Override
-    public String getActividad() {
-        return "Caminando por el Bosque Tropical...";
+    public void realizarActividadPrincipal() {
+        System.out.println("Actividad: " + actividad);
     }
 }

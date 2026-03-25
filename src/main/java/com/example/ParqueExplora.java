@@ -2,24 +2,31 @@ package com.example;
 
 public class ParqueExplora implements EspacioCultural {
 
-    @Override
-    public String getNombre() {
-        return "Parque Explora";
+    private String nombre;
+    private String horario;
+    private String requisito;
+    private String actividad;
+
+    public ParqueExplora() {
+        this.nombre = "Parque Explora";
+        this.horario = "8:30 AM - 5:30 PM";
+        this.requisito = "Entrada paga";
+        this.actividad = "Experimentos interactivos y ciencia";
     }
 
     @Override
-    public String getHorario() {
-        return "8:30 AM - 5:30 PM";
+    public void mostrarHorario() {
+        System.out.println("Lugar: " + nombre);
+        System.out.println("Horario: " + horario);
     }
 
     @Override
-    public String getRequisito() {
-        return "Documento original y boleta";
+    public String obtenerRequisitoEntrada() {
+        return requisito;
     }
 
     @Override
-    public String getActividad() {
-        return "Interactuando con experimentos científicos...";
+    public void realizarActividadPrincipal() {
+        System.out.println("Actividad: " + actividad);
     }
 }
-

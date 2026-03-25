@@ -1,11 +1,10 @@
 package com.example;
+
 public interface EspacioCultural {
 
-    String getNombre();
+    void mostrarHorario(); // imprime el horario
 
-    String getHorario();
+    String obtenerRequisitoEntrada(); // retorna requisito
 
-    String getRequisito();
-
-    String getActividad();
+    void realizarActividadPrincipal(); // imprime actividad
 }

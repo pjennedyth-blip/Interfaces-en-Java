@@ -2,24 +2,31 @@ package com.example;
 
 public class MuseoDeAntioquia implements EspacioCultural {
 
-    @Override
-    public String getNombre() {
-        return "Museo de Antioquia";
+    private String nombre;
+    private String horario;
+    private String requisito;
+    private String actividad;
+
+    public MuseoDeAntioquia() {
+        this.nombre = "Museo de Antioquia";
+        this.horario = "10:00 AM - 5:30 PM";
+        this.requisito = "Entrada paga";
+        this.actividad = "Exposición de arte y cultura";
     }
 
     @Override
-    public String getHorario() {
-        return "10:00 AM - 5:30 PM";
+    public void mostrarHorario() {
+        System.out.println("Lugar: " + nombre);
+        System.out.println("Horario: " + horario);
     }
 
     @Override
-    public String getRequisito() {
-        return "Boleta pagada";
+    public String obtenerRequisitoEntrada() {
+        return requisito;
     }
 
     @Override
-    public String getActividad() {
-        return "Observando obras de arte y cultura...";
+    public void realizarActividadPrincipal() {
+        System.out.println("Actividad: " + actividad);
     }
 }
-
